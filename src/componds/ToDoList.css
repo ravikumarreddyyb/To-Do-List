@@ -1,0 +1,171 @@
+body{
+    background-color: hsl(0, 0%, 10%);
+}
+.to-do-list{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+h1{
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+}
+button{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.add-button{
+    background-color: hsl(125, 47%, 54%);
+}
+.add-button:hover{
+    background-color: hsl(125, 47%, 44%);
+}
+.delete-button{
+    background-color: hsl(10, 90%, 50%);
+}
+.delete-button:hover{
+    background-color: hsl(10, 90%, 40%);
+}
+.move-button{
+    background-color: hsl(207, 90%, 64%);
+}
+.move-button:hover{
+    background-color:  hsl(207, 90%, 54%);
+}
+
+input[type="text"]{
+    font-size: 1.6rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid hsl(0, 0%, 80%, 0.5);
+    color: hsl(0, 0%, 0%, 0.5);
+}
+ol{
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+    max-height: 400px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+li{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 3px solid hsla(0, 0%, 85%, 0.75);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.text{
+    flex: 1;
+}
+.delete-button, .move-button{
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+
+
+
+
+.ol{
+    padding: 10px;
+}
+li:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+input[type="text"]:focus {
+    outline: none;
+    border-color: hsl(125, 47%, 54%);
+    box-shadow: 0 0 10px hsla(125, 47%, 54%, 0.5);
+}
+body.dark-mode {
+    background-color: hsl(0, 0%, 15%);
+    color: white;
+}
+
+body.dark-mode .add-button,
+body.dark-mode .delete-button,
+body.dark-mode .move-button {
+    color: hsl(0, 0%, 90%);
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+li {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    button {
+        font-size: 1.4rem;
+        padding: 8px 16px;
+    }
+    input[type="text"] {
+        font-size: 1.4rem;
+    }
+}
+input[type="text"]::placeholder {
+    color: hsl(0, 0%, 50%);
+    font-style: italic;
+}
+.to-do-list input[type="text"] {
+    width: 80%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+input[type="text"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+input[type="text"] {
+    padding: 12px 15px;
+}
+li .text {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+
+
